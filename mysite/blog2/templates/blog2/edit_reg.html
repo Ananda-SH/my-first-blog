@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form method="POST" action="{% url 'blog2/">-->
+<!--<input type="text" value="{{data.name}}">-->
+<!--<input type="number" value="{{data.number}}">-->
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+<!--</form>-->
+{{data}}
+</body>
+</html>
